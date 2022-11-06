@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Auto Summation</title>
+
+</head>
+<body>
+	Price : <input type="text" id="price">
+	Quantity : <input type="text" id="qty">
+	Total Amount : <input type="text" id="total">
+
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+			crossorigin="anonymous">
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			$("#price, #qty").keyup(function(){
+
+				var total=0;    	
+				var x = Number($("#price").val());
+				var y = Number($("#qty").val());
+				var total=x * y;  
+
+				$('#total').val(total);
+
+			});
+		});
+	</script>
+</body>
+</html>
